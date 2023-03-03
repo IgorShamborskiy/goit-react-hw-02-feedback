@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import css from '../Statistic/StatisticValue.module.css';
 
 const Statistic = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div className={css.statdiv}>
-    <li>Good:{good}</li>
-    <li>Neutral:{neutral}</li>
-    <li>Bad:{bad}</li>
-    <li>Total:{total}</li>
-    <li>Positive feedback:{positivePercentage}%</li>
+  <div>
+    <ul className={css.statdiv}>
+      <li>Good:{good}</li>
+      <li>Neutral:{neutral}</li>
+      <li>Bad:{bad}</li>
+      <li>Total:{total}</li>
+      <li>Positive feedback:{positivePercentage}%</li>
+    </ul>
   </div>
 );
-
-export default Statistic;
 
 Statistic.propTypes = {
   good: PropTypes.number.isRequired,
@@ -21,3 +21,5 @@ Statistic.propTypes = {
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.string.isRequired,
 };
+
+export default Statistic;
